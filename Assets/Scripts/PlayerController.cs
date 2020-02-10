@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public bool IsFacingRight;
     public bool fallingrn;
 
-
+    public new AudioController audio;
 
     // Start is called before the first frame update
     void Start()
@@ -157,6 +157,7 @@ public class PlayerController : MonoBehaviour
         //jump
         if (grounded && Input.GetButtonUp("Jump") && !inDownScene && !animator.GetCurrentAnimatorStateInfo(0).IsName("FarmerFall"))
         {
+            audio.Jump();
             rigidBody.velocity = Vector2.up * jumpForce;
             ScoreScript.jumpCount++;
             jumpForce = 3;
@@ -165,6 +166,7 @@ public class PlayerController : MonoBehaviour
         //falling control
         if (grounded && isFalling)
         {
+            audio.Fall();
             isFalling = false;
             ScoreScript.fallNumber++;
         }
@@ -251,6 +253,7 @@ public class PlayerController : MonoBehaviour
 
     public void Reject(Vector2 position)
     {
+        audio.Reject();
         float magnitude;
         Vector3  direction =  ( transform.position- (Vector3)position).normalized;
         magnitude = IsGrounded() ? 1600 : 700;
@@ -268,15 +271,13 @@ public class PlayerController : MonoBehaviour
         }
       
     }
-
-    /*void OnCollisionEnter2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "rocket")
+        if (coll.gameObject.tag == "wall")
         {
-            Vector2 direction = -(coll.contacts[0].point - (Vector2)transform.position).normalized;
-            rigidBody.AddForce(direction*10f);
+            audio.WallHit();
         }
-    }*/
+    }
     private void OnTriggerExit2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "windArea")

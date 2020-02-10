@@ -3,24 +3,43 @@
 public class AudioController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public AudioClip MusicClip;
+    public AudioClip jump;
+    public AudioClip reject;
+    public AudioClip wallHit;
+    public AudioClip fall;
     public  AudioSource musicSource;
     private float musicVolume = 1f;
-    void Start() 
+    /*void Start() 
     {
-        musicSource.clip = MusicClip;
-    }
+        
+    }*/
 
     // Update is called once per frame
     void Update()
     {
         musicSource.volume = musicVolume;
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            musicSource.Play();
-        }
     }
 
+    public void Jump()
+    {
+        musicSource.clip = jump;
+        musicSource.Play();
+    }
+    public void Reject()
+    {
+        musicSource.clip = reject;
+        musicSource.Play();
+    }
+    public void WallHit()
+    {
+        musicSource.clip = wallHit;
+        musicSource.Play();
+    }
+    public void Fall()
+    {
+        musicSource.clip = fall;
+        musicSource.Play();
+    }
     public void SetVolume(float vol)
     {
         musicVolume = vol;
