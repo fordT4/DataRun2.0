@@ -294,6 +294,7 @@ public class PlayerController : MonoBehaviour
     {
         SavePlayer();
         SaveSystem.SaveScore();
+        SaveSystem.SaveSettings();
     }
 
 }

@@ -8,11 +8,11 @@ public class AudioController : MonoBehaviour
     public AudioClip wallHit;
     public AudioClip fall;
     public  AudioSource musicSource;
-    private float musicVolume = 1f;
-    /*void Start() 
+    public static float musicVolume = 1f;
+    void Start()
     {
-        
-    }*/
+       LoadVolume();
+    }
 
     // Update is called once per frame
     void Update()
@@ -39,6 +39,12 @@ public class AudioController : MonoBehaviour
     {
         musicSource.clip = fall;
         musicSource.Play();
+    }
+
+    private void LoadVolume()
+    {
+       SettingsData data= SaveSystem.LoadSettings();
+       musicVolume = data.volume;
     }
     public void SetVolume(float vol)
     {
