@@ -1,22 +1,17 @@
-﻿using System.Collections;
+﻿
 using UnityEngine;
 
 
 public class FallingObjects : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] public GameObject myPrefabs;
-   
-    
-    public LayerMask layerMask;
-    // Start is called before the first frame update
+     public LayerMask layerMask;
+  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
       
     }
-
- 
 
     void Update()
     {
