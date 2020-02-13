@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: 183e40cef1dd79545ae46719e00abacf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4747616002562531394
+    second: "Rzeczy ogr\xF3d_0"
+  - first:
+      213: -1197784214999344662
+    second: "Rzeczy ogr\xF3d_1"
+  - first:
+      213: -5991361317818938815
+    second: "Rzeczy ogr\xF3d_2"
+  - first:
+      213: 7044697694627509935
+    second: "Rzeczy ogr\xF3d_3"
+  - first:
+      213: -4782448062629247264
+    second: "Rzeczy ogr\xF3d_4"
+  - first:
+      213: 5776492826727802818
+    second: "Rzeczy ogr\xF3d_5"
+  - first:
+      213: 5698692523059443177
+    second: "Rzeczy ogr\xF3d_6"
+  - first:
+      213: -3009446143894943472
+    second: "Rzeczy ogr\xF3d_7"
+  - first:
+      213: -5368102030428746182
+    second: "Rzeczy ogr\xF3d_8"
+  - first:
+      213: -1637129004681712120
+    second: "Rzeczy ogr\xF3d_9"
+  - first:
+      213: 6750821281667195061
+    second: "Rzeczy ogr\xF3d_10"
+  - first:
+      213: 6345366770860990303
+    second: "Rzeczy ogr\xF3d_11"
+  - first:
+      213: 6072399816871384649
+    second: "Rzeczy ogr\xF3d_12"
+  - first:
+      213: -888827898056059048
+    second: "Rzeczy ogr\xF3d_13"
+  - first:
+      213: -5312137443373871423
+    second: "Rzeczy ogr\xF3d_14"
+  - first:
+      213: 3014213526495988575
+    second: "Rzeczy ogr\xF3d_15"
+  - first:
+      213: 3378864535249227185
+    second: "Rzeczy ogr\xF3d_16"
+  - first:
+      213: -5231787984019516795
+    second: "Rzeczy ogr\xF3d_17"
+  - first:
+      213: 691815490904679202
+    second: "Rzeczy ogr\xF3d_18"
+  - first:
+      213: -493437587177230425
+    second: "Rzeczy ogr\xF3d_19"
+  - first:
+      213: -3744310291859846548
+    second: "Rzeczy ogr\xF3d_20"
+  - first:
+      213: -5388717167119815816
+    second: "Rzeczy ogr\xF3d_21"
+  - first:
+      213: 2546674618086332089
+    second: "Rzeczy ogr\xF3d_22"
+  - first:
+      213: 7506033752873383538
+    second: "Rzeczy ogr\xF3d_23"
+  - first:
+      213: -8852109562858860819
+    second: "Rzeczy ogr\xF3d_24"
+  - first:
+      213: -5593934288670408319
+    second: "Rzeczy ogr\xF3d_25"
+  - first:
+      213: 428241777829283105
+    second: "Rzeczy ogr\xF3d_26"
+  - first:
+      213: -9175640581265663121
+    second: "Rzeczy ogr\xF3d_27"
+  - first:
+      213: 268553384916604749
+    second: "Rzeczy ogr\xF3d_28"
+  - first:
+      213: 1168738676301236198
+    second: "Rzeczy ogr\xF3d_29"
+  - first:
+      213: 5367496789021981687
+    second: "Rzeczy ogr\xF3d_30"
+  - first:
+      213: -2689135673848413007
+    second: "Rzeczy ogr\xF3d_31"
+  - first:
+      213: 2631087661620273106
+    second: "Rzeczy ogr\xF3d_32"
+  - first:
+      213: 6243094431954195677
+    second: "Rzeczy ogr\xF3d_33"
+  - first:
+      213: 9002301387970443531
+    second: "Rzeczy ogr\xF3d_34"
+  - first:
+      213: -8400263766520527315
+    second: "Rzeczy ogr\xF3d_35"
+  - first:
+      213: -6524706763556932220
+    second: "Rzeczy ogr\xF3d_36"
+  - first:
+      213: 2136923862114882300
+    second: "Rzeczy ogr\xF3d_37"
+  - first:
+      213: -4816544237450799074
+    second: "Rzeczy ogr\xF3d_38"
+  - first:
+      213: 5342637945439959930
+    second: "Rzeczy ogr\xF3d_39"
+  - first:
+      213: -5850375007300494739
+    second: "Rzeczy ogr\xF3d_40"
+  - first:
+      213: 2684452820650904827
+    second: "Rzeczy ogr\xF3d_41"
+  - first:
+      213: -5617760986753301931
+    second: "Rzeczy ogr\xF3d_42"
+  - first:
+      213: 2694165031486567779
+    second: "Rzeczy ogr\xF3d_43"
+  - first:
+      213: -341229846848583604
+    second: "Rzeczy ogr\xF3d_44"
+  - first:
+      213: -449248113939067783
+    second: "Rzeczy ogr\xF3d_45"
+  - first:
+      213: 3541441758712795345
+    second: "Rzeczy ogr\xF3d_46"
+  - first:
+      213: -8520685040338664043
+    second: "Rzeczy ogr\xF3d_47"
+  - first:
+      213: -3445231943255011855
+    second: "Rzeczy ogr\xF3d_48"
+  - first:
+      213: 2394117014039851482
+    second: "Rzeczy ogr\xF3d_49"
+  - first:
+      213: -3681739611185334555
+    second: "Rzeczy ogr\xF3d_50"
+  - first:
+      213: 8513689422308000452
+    second: "Rzeczy ogr\xF3d_51"
+  - first:
+      213: -4726720223450802911
+    second: "Rzeczy ogr\xF3d_52"
+  - first:
+      213: -9170707914983517879
+    second: "Rzeczy ogr\xF3d_53"
+  - first:
+      213: -8130906482968012645
+    second: "Rzeczy ogr\xF3d_54"
+  - first:
+      213: -3434247563202875713
+    second: "Rzeczy ogr\xF3d_55"
+  - first:
+      213: -5588850756363536999
+    second: "Rzeczy ogr\xF3d_56"
+  - first:
+      213: -7108670546557140567
+    second: "Rzeczy ogr\xF3d_57"
+  - first:
+      213: -2133482775885168697
+    second: "Rzeczy ogr\xF3d_58"
+  - first:
+      213: 1156197962394916200
+    second: "Rzeczy ogr\xF3d_59"
+  - first:
+      213: 9030077446987758763
+    second: "Rzeczy ogr\xF3d_60"
+  - first:
+      213: -7238767791807460121
+    second: "Rzeczy ogr\xF3d_61"
+  - first:
+      213: 8613975743693382602
+    second: "Rzeczy ogr\xF3d_62"
+  - first:
+      213: -1894709422432980334
+    second: "Rzeczy ogr\xF3d_63"
+  - first:
+      213: 847898661745107408
+    second: "Rzeczy ogr\xF3d_64"
+  - first:
+      213: -7404537091020736853
+    second: "Rzeczy ogr\xF3d_65"
+  - first:
+      213: -1832332913281175335
+    second: "Rzeczy ogr\xF3d_66"
+  - first:
+      213: 2431423018887691323
+    second: "Rzeczy ogr\xF3d_67"
+  - first:
+      213: 4332247891056352962
+    second: "Rzeczy ogr\xF3d_68"
+  - first:
+      213: 1497099006706672222
+    second: "Rzeczy ogr\xF3d_69"
+  - first:
+      213: 8005000528191276295
+    second: "Rzeczy ogr\xF3d_70"
+  - first:
+      213: 3104818520567885344
+    second: "Rzeczy ogr\xF3d_71"
+  - first:
+      213: 7494716122507256064
+    second: "Rzeczy ogr\xF3d_72"
+  - first:
+      213: 1273012502204146314
+    second: "Rzeczy ogr\xF3d_73"
+  - first:
+      213: -2403990833144920137
+    second: "Rzeczy ogr\xF3d_74"
+  - first:
+      213: 5250680008478274573
+    second: "Rzeczy ogr\xF3d_75"
+  - first:
+      213: 6069745822604853951
+    second: "Rzeczy ogr\xF3d_76"
+  - first:
+      213: -6258156418572699967
+    second: "Rzeczy ogr\xF3d_77"
+  - first:
+      213: -5870194840092943254
+    second: "Rzeczy ogr\xF3d_78"
+  - first:
+      213: 9066685813307379935
+    second: "Rzeczy ogr\xF3d_79"
+  - first:
+      213: 7054839000121677534
+    second: "Rzeczy ogr\xF3d_80"
+  - first:
+      213: 5651997668033396512
+    second: "Rzeczy ogr\xF3d_81"
+  - first:
+      213: -6907211398361215773
+    second: "Rzeczy ogr\xF3d_82"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8fe0fcab80b0149be8ef73239826aa
+      internalID: 4747616002562531394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a60f90de767c454abb8e1090b07d095
+      internalID: -1197784214999344662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_2"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fa143d83a1b5349bd0d377566a604b
+      internalID: -5991361317818938815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_3"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d14de19f4f792488d1605a08c5f148
+      internalID: 7044697694627509935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_4"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cf4895559831a41a17245762ca10cd
+      internalID: -4782448062629247264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036d1bc339f512c429ff7a399980c4fd
+      internalID: 5776492826727802818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_6"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca2aa5c8a104284eb5ca6df3f10df43
+      internalID: 5698692523059443177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_7"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a3a170e2cc18944a827f825b324ecd
+      internalID: -3009446143894943472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_8"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37e26cf8a158ce4db331c93c1705bea
+      internalID: -5368102030428746182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_9"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de4ac2919775d24da49970ad4c863c3
+      internalID: -1637129004681712120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_10"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb73f9e26b5a7649995890234e3dae8
+      internalID: 6750821281667195061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_11"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a8d765a5c79504ea33f70ef0c4d164
+      internalID: 6345366770860990303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_12"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34167b3743647bd489ddc72d7b6e56df
+      internalID: 6072399816871384649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_13"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613e6cf3bfdb48e41b397e51ca35e5a5
+      internalID: -888827898056059048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_14"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a53765d994d03645bde64d9eb05ce6f
+      internalID: -5312137443373871423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_15"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d117fa3b1f473cc41bbf216f2839cb5c
+      internalID: 3014213526495988575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_16"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42381649a8d104f49b6f85761e788e23
+      internalID: 3378864535249227185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Rzeczy ogr\xF3d_17"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8592e8361bf8d4d940214c52c0120d
+      internalID: -5231787984019516795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
