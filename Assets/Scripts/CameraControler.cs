@@ -100,11 +100,11 @@ public class CameraControler : MonoBehaviour
             changeSize = false;
         }
 
-        if (focusPosition.y >= 120 && focusPosition.y<192)
+        if (focusPosition.y >= 120 && focusPosition.y<192 && !PauseMenu.GameIsPaused)
         {
             Time.timeScale = 0.5f;
         }
-        else
+        else if (!PauseMenu.GameIsPaused)
         {
             Time.timeScale = 1;
         }

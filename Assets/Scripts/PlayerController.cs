@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool grounded;
     public bool inWindZone = false;
     public bool inStaticWindZone = false;
-    private bool isFalling;
+    
     private bool inDownScene;
     public static bool isRestart = false;
 
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public bool spacePressed;
     public bool IsFacingRight;
-    public bool fallingrn;
+    private bool isFalling;
 
     public new AudioController audio;
 
@@ -81,12 +81,12 @@ public class PlayerController : MonoBehaviour
                 rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
             }
             //move block when we hold jump button
-            else if (Input.GetButton("Jump") && grounded && !inWindZone && !inStaticWindZone)
+            else if (Input.GetButton("Jump") && grounded && !inWindZone && !inStaticWindZone && !animator.GetCurrentAnimatorStateInfo(0).IsName("FarmerFall"))
             {
                 spacePressed = true;
                 rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
             }
-            else if (spacePressed)
+            else if (spacePressed && !animator.GetCurrentAnimatorStateInfo(0).IsName("FarmerFall"))
             {
                 spacePressed = false;
             }
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         //animator state variables
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetBool("Grounded", grounded);
-        animator.SetBool("Falling", isFalling);
+        animator.SetBool("Falling", false);
         animator.SetBool("SpacePressed", spacePressed);
         animator.SetBool("DownScene", inDownScene);
       
@@ -167,6 +167,7 @@ public class PlayerController : MonoBehaviour
         if (grounded && isFalling)
         {
             audio.Fall();
+            animator.SetBool("Falling", true);
             isFalling = false;
             ScoreScript.fallNumber++;
         }
