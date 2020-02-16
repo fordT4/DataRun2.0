@@ -12,6 +12,8 @@ public class ScoreScript : MonoBehaviour
     public static int fallNumber;
     public static int jumpCount;
     public static float tmpT;
+
+    public static float corrector;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +23,11 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tmpT = Time.time + startTime;
+        tmpT = Time.time + startTime-corrector;
+        Debug.Log(Time.time);
        
-        string hours = ((int)tmpT / 3600).ToString("f0");
-        string minutes = ((int)tmpT / 60).ToString("f0");
+        string hours = (((int)tmpT / 3600)%3600).ToString("f0");
+        string minutes = (((int)tmpT / 60)%60).ToString("f0");
         string seconds = (tmpT % 60).ToString("f0");
 
         timerText.text ="In-game time: " + hours + ":" + minutes + ":" + seconds;
@@ -46,6 +49,7 @@ public class ScoreScript : MonoBehaviour
         fallNumber = 0;
         jumpCount = 0;
         startTime = 0;
+        corrector = Time.time;
         SaveSystem.SaveScore();
     }
 }
