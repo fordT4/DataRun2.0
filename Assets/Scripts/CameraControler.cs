@@ -1,5 +1,4 @@
 ﻿using System.Numerics;
-using UnityEditor;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -19,7 +18,7 @@ public class CameraControler : MonoBehaviour
     public float followDistance;
     public static bool change = false;
     private bool changeSize=false;
-    public static bool startSpawn = false;
+    public static bool startSpawn=false;
     
 
     // Update is called once per frame
@@ -54,12 +53,12 @@ public class CameraControler : MonoBehaviour
         }
         if (focusPosition.x > right)
         {
+           
             left += rightLeft;
             right += rightLeft;
             transform.position += new Vector3(rightLeft, 0,0);
         }
 
-        //down scene
         if (focusPosition.y < 73 && focusPosition.y > 12.5f && focusPosition.x < -145 && focusPosition.x > -166)
         {
             Vector3 distance = focusPosition - (Vector2)transform.position;
@@ -68,6 +67,13 @@ public class CameraControler : MonoBehaviour
             change = true;
         }
 
+        //down scene
+        if (change && focusPosition.y > 73)
+        {
+            change = false;
+            transform.position += new Vector3(0, +7.4f, 0);
+           
+        }
         if (change && focusPosition.y < 12.5)
         {
             change = false;
@@ -77,9 +83,9 @@ public class CameraControler : MonoBehaviour
         //scalling to 4th lvl
         if (focusPosition.x < -197.5f && !changeSize)
         {
+            startSpawn = true;
             Vector3 direction = focusObject.transform.localScale;
             focusObject.transform.localScale = direction.x < 0 ? new Vector3(-1, 1, 1) : new Vector3(1, 1, 1);
-            startSpawn = true;
             PlayerController.rayCastSizeX = 0;
             PlayerController.rayCastSizeY = 0.28f;
             PlayerController.rayLength = 0.64f;

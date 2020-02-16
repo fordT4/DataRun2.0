@@ -17,9 +17,9 @@ public class PlayerController : MonoBehaviour
     public bool grounded;
     public bool inWindZone = false;
     public bool inStaticWindZone = false;
-    
     private bool inDownScene;
     public static bool isRestart = false;
+    public bool canMove = true;
 
 
     //serialized fields
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     //animation
     public Animator animator;
     public bool spacePressed;
-    public bool IsFacingRight;
+    public bool isFacingRight;
     private bool isFalling;
 
     public new AudioController audio;
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (!VillanController.isAnimation) return;
+        if (!VillanController.isAnimation || !canMove) return;
 
         // 3 level mechanics
         if (inDownScene)
@@ -124,22 +124,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (!VillanController.isAnimation || !canMove) return;
         //animator state variables
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetBool("Grounded", grounded);
         animator.SetBool("Falling", false);
         animator.SetBool("SpacePressed", spacePressed);
         animator.SetBool("DownScene", inDownScene);
-      
-
 
         inDownScene = CameraControler.change;
         grounded = IsGrounded();
-       
-
-        if (!VillanController.isAnimation) return;
-
+        
         // physic change in level 3
         if (inDownScene)
         {
@@ -177,11 +173,11 @@ public class PlayerController : MonoBehaviour
         }
         
         //player flipping
-        if (moveInput > 0 && !IsFacingRight)
+        if (moveInput > 0 && !isFacingRight)
         {
             Flip();
         }
-        else if (moveInput < 0 && IsFacingRight)
+        else if (moveInput < 0 && isFacingRight)
         {
             Flip();
         }
@@ -238,7 +234,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Flip()
     {
-        IsFacingRight = !IsFacingRight;
+        isFacingRight = !isFacingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
@@ -277,13 +273,6 @@ public class PlayerController : MonoBehaviour
         }
       
     }
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "wall")
-        {
-            audio.WallHit();
-        }
-    }
     private void OnTriggerExit2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "windArea")
@@ -296,6 +285,26 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "wall")
+        {
+            audio.WallHit();
+        }
+        if (coll.gameObject.tag == "animal")
+        {
+            canMove = false;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D coll)
+    {
+      
+        if (coll.gameObject.tag == "animal")
+        {
+            canMove = true;
+        }
+    }
+  
     void OnApplicationQuit()
     {
         SavePlayer();
