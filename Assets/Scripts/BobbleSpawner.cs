@@ -8,13 +8,16 @@ public class BobbleSpawner : MonoBehaviour
     private float nextDrop;
     void Start()
     {
-        dropRate = Random.Range(1.5f, 7f);
         nextDrop = Time.time;
     }
 
     void Update()
     {
-        CheckToDrop();
+        
+        if (CameraControler.change)
+        {
+            CheckToDrop();
+        }
     }
 
     void CheckToDrop()
@@ -22,8 +25,9 @@ public class BobbleSpawner : MonoBehaviour
         if (Time.time > nextDrop)
         {
             Instantiate(myPrefabs, transform.position, Quaternion.identity);
+            dropRate = Random.Range(1.5f, 7f);
             nextDrop = Time.time + dropRate;
-            dropRate = Random.Range(1.5f, 5f);
+            
         }
     }
 }

@@ -24,7 +24,7 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         tmpT = Time.time + startTime-corrector;
-        Debug.Log(Time.time);
+       
        
         string hours = (((int)tmpT / 3600)%3600).ToString("f0");
         string minutes = (((int)tmpT / 60)%60).ToString("f0");

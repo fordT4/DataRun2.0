@@ -15,7 +15,10 @@ public class SpawnPlace : MonoBehaviour
 
     void Update()
     {
-        CheckToDrop();
+        if (CameraControler.startSpawn)
+        {
+            CheckToDrop();
+        }
     }
 
     void CheckToDrop()
