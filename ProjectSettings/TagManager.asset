@@ -9,6 +9,7 @@ TagManager:
   - destroy
   - rocket
   - wall
+  - animal
   layers:
   - Default
   - TransparentFX
