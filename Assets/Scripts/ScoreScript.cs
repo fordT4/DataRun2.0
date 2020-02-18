@@ -30,7 +30,7 @@ public class ScoreScript : MonoBehaviour
         string minutes = (((int)tmpT / 60)%60).ToString("f0");
         string seconds = (tmpT % 60).ToString("f0");
 
-        timerText.text ="In-game time: " + hours + ":" + minutes + ":" + seconds;
+        timerText.text ="In-game time: " + hours + "H " + minutes + "M " + seconds+"S ";
         jumpNumberText.text = "Jump number: " + jumpCount;
         fallNumberText.text = "Fall number: " + fallNumber;
 
