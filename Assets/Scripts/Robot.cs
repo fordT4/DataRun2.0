@@ -20,7 +20,6 @@ public class Robot : MonoBehaviour
 
     void Start()
     {
-        
         boxCollider = GetComponent<BoxCollider2D>();
         target = GameObject.FindObjectOfType<PlayerController>();
     }
