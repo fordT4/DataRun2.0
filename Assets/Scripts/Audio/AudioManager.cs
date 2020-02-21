@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource music;
+
     public Slider volume;
     public Slider fxVolume;
 
@@ -17,16 +17,21 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
-        music.volume = volume.value;
+        volume.value = volume.value;
+        fxVolume.value = PlayerPrefs.GetFloat("FxVolume");
+
+    }*/
+
+    public void Volume()
+    {
+        PlayerPrefs.SetFloat("MusicVolume",volume.value);
+    }
+    public void FxVolume()
+    {
+        PlayerPrefs.SetFloat("FxVolume", fxVolume.value);
     }
 
-    public void VolumePrefs()
-    {
-        PlayerPrefs.SetFloat("MusicVolume",music.volume);
-        PlayerPrefs.SetFloat("FxVolume",fxVolume.value);
-    }
 
- 
 }

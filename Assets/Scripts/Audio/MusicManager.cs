@@ -7,7 +7,7 @@ public class MusicManager : MonoBehaviour
 
     public AudioSource music;
     
-    void Start()
+    void Update()
     {
         music.volume = PlayerPrefs.GetFloat("MusicVolume");
     }
