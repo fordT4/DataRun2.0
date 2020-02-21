@@ -5,9 +5,9 @@ using Vector3 = UnityEngine.Vector3;
 
 public class CameraControler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
 
-
+  
     public GameObject focusObject;
     private Vector2 focusPosition;
     private float up=12;
@@ -19,17 +19,17 @@ public class CameraControler : MonoBehaviour
     public static bool change = false;
     private bool changeSize=false;
     public static bool startSpawn=false;
-    
+   
 
-    // Update is called once per frame
+    
     void Update()
     {
+        
         focusPosition = focusObject.transform.position;
 
         //camera up-down
         if (focusPosition.y >= up)
         {
-            
             up += 15f;
             down += 15f;
             transform.position += new Vector3(0, 15f, 0);
@@ -37,7 +37,6 @@ public class CameraControler : MonoBehaviour
         }
         if (focusPosition.y < down)
         {
-          
             up -= 15f;
             down -= 15f;
             transform.position += new Vector3(0, -15f, 0);
@@ -59,6 +58,9 @@ public class CameraControler : MonoBehaviour
             transform.position += new Vector3(rightLeft, 0,0);
         }
 
+        
+
+        //down scene
         if (focusPosition.y < 73 && focusPosition.y > 12.5f && focusPosition.x < -145 && focusPosition.x > -166)
         {
             Vector3 distance = focusPosition - (Vector2)transform.position;
@@ -67,7 +69,6 @@ public class CameraControler : MonoBehaviour
             change = true;
         }
 
-        //down scene
         if (change && focusPosition.y > 73)
         {
             change = false;

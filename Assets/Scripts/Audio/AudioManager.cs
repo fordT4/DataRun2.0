@@ -16,14 +16,6 @@ public class AudioManager : MonoBehaviour
         fxVolume.value = PlayerPrefs.GetFloat("FxVolume");
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        volume.value = volume.value;
-        fxVolume.value = PlayerPrefs.GetFloat("FxVolume");
-
-    }*/
-
     public void Volume()
     {
         PlayerPrefs.SetFloat("MusicVolume",volume.value);

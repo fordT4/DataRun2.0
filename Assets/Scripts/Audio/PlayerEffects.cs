@@ -5,7 +5,7 @@ public class PlayerEffects : MonoBehaviour
 {
     // Start is called before the first frame update
     public AudioClip jump;
-    public AudioClip reject;
+    public AudioClip explosion;
     public AudioClip wallHit;
     public AudioClip fall;
     public AudioSource musicSource;
@@ -23,7 +23,7 @@ public class PlayerEffects : MonoBehaviour
     }
     public void Reject()
     {
-        musicSource.clip = reject;
+        musicSource.clip = explosion;
         musicSource.Play();
     }
     public void WallHit()

@@ -27,17 +27,7 @@ public class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
-    public static void SaveSettings()
-    {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/settings.neverend";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        SettingsData data = new SettingsData();
-
-        formatter.Serialize(stream, data);
-        stream.Close();
-    }
+    
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.neverend";
@@ -75,23 +65,5 @@ public class SaveSystem
         }
 
     }
-    public static SettingsData LoadSettings()
-    {
-        string path = Application.persistentDataPath + "/settings.neverend";
-        if (File.Exists(path))
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-
-            SettingsData data = formatter.Deserialize(stream) as SettingsData;
-            stream.Close();
-            return data;
-        }
-        else
-        {
-            Debug.LogError("Save file not found in " + path);
-            return null;
-        }
-
-    }
+   
 }

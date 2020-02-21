@@ -255,11 +255,14 @@ public class PlayerController : MonoBehaviour
 
     public void Reject(Vector2 position)
     {
+        
         audio.Reject();
         float magnitude;
-        Vector3  direction =  ( transform.position- (Vector3)position).normalized;
-        magnitude = IsGrounded() ? 1600 : 700;
-        GetComponent<Rigidbody2D>().AddForce(direction*magnitude);
+        Vector3 direction =  ( transform.position - (Vector3)position).normalized;
+        Debug.Log(direction);
+        magnitude = IsGrounded() ? 2000 : 700;
+        GetComponent<Rigidbody2D>().AddForce(direction * magnitude);
+        
     }                                                                                                    
     private void OnTriggerEnter2D(Collider2D coll)  
     {
@@ -309,7 +312,7 @@ public class PlayerController : MonoBehaviour
     {
         SavePlayer();
         SaveSystem.SaveScore();
-        SaveSystem.SaveSettings();
+       
     }
 
 }
