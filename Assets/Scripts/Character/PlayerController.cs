@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (!VillanController.isAnimation || !canMove) return;
+        if (!VillanController.isAnimation || !canMove ||PauseMenu.GameIsPaused) return;
 
         // 3 level mechanics
         if (inDownScene)
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if (!VillanController.isAnimation || !canMove) return;
+        if (!VillanController.isAnimation || !canMove || PauseMenu.GameIsPaused) return;
         //animator state variables
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetBool("Grounded", grounded);
@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
         //jump
         if (grounded && Input.GetButtonUp("Jump") && !inDownScene && !animator.GetCurrentAnimatorStateInfo(0).IsName("FarmerFall"))
         {
-            audio.Jump();
+            audio.Jump(); 
             rigidBody.velocity = Vector2.up * jumpForce;
             ScoreScript.jumpCount++;
             jumpForce = 3;
