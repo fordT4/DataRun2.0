@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AudioController : MonoBehaviour
 {
@@ -7,7 +8,9 @@ public class AudioController : MonoBehaviour
     public AudioClip reject;
     public AudioClip wallHit;
     public AudioClip fall;
-    public  AudioSource musicSource;
+    public AudioSource musicSource;
+    public Slider volume;
+    public Slider Sfx;
     public static float musicVolume = 1f;
     void Start()
     {
@@ -18,6 +21,7 @@ public class AudioController : MonoBehaviour
     void Update()
     {
         musicSource.volume = musicVolume;
+        SaveSystem.SaveSettings();
     }
 
     public void Jump()
@@ -41,10 +45,11 @@ public class AudioController : MonoBehaviour
         musicSource.Play();
     }
 
-    private void LoadVolume()
+    public void LoadVolume()
     {
        SettingsData data= SaveSystem.LoadSettings();
        musicVolume = data.volume;
+       musicSource.volume = musicVolume;
     }
     public void SetVolume(float vol)
     {
