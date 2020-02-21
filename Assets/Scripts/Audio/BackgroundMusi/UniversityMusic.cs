@@ -29,6 +29,6 @@ public class UniversityMusic : MonoBehaviour
 
     bool OnUniversity()
     {
-        return focusPosition.x < 19 && focusPosition.x > -8 && focusPosition.y < 72 && focusPosition.y > -1;
+        return focusPosition.x < 19 && focusPosition.x > -8 && focusPosition.y < 72 && focusPosition.y > -2;
     }
 }
