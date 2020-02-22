@@ -4,16 +4,15 @@ using Vector2 = UnityEngine.Vector2;
 
 public class VillanController : MonoBehaviour
 {
-
+    public PlayerEffects music;
     private Rigidbody2D rigidBody;
-    private BoxCollider2D boxCollider;
     public static bool isAnimation=false;
     private bool startAnimation=false;
    
     void Start()
     {
+      
         rigidBody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
         if (startAnimation ||MainMenu.isStart)
         {
             isAnimation = true;
@@ -22,12 +21,13 @@ public class VillanController : MonoBehaviour
         else
         {
             isAnimation = true;
-            gameObject.SetActive(false);
+            transform.position = new Vector3(-221, 268.5f, 0);
         }
     }
 
     void Update()
     {
+        //music.volume = PlayerPrefs.GetFloat("FxMusic");
         if( PlayerController.isRestart)
         { startAnimation = true;}
     }
@@ -42,17 +42,21 @@ public class VillanController : MonoBehaviour
     IEnumerator MoveVillanTask()
     {
         //yield return new WaitForSeconds(5);//czas scenki to bedzie
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1);
+        music.Jump();
         rigidBody.velocity = new Vector2(6f, 16f);
         yield return new WaitForSeconds(2);
+        music.Jump();
         rigidBody.velocity = new Vector2(-6, 16f);
         yield return new WaitForSeconds(2);
+        music.Jump();
         rigidBody.velocity = new Vector2(-6, 16f);
         yield return new WaitForSeconds(2);
+        music.Jump();
         rigidBody.velocity = new Vector2(0, 16f);
         yield return new WaitForSeconds(1);
         isAnimation = true;
-        gameObject.SetActive(false);
+        transform.position=new Vector3(-221,268.5f,0);
     }
 
 }

@@ -22,9 +22,8 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
 
 
-    //serialized fields
-    [SerializeField] public GameObject windZone;
-    [SerializeField] public int timer;
+    
+   public GameObject windZone;
 
     //object classes
     private Rigidbody2D rigidBody;
@@ -49,9 +48,6 @@ public class PlayerController : MonoBehaviour
             MainMenu.isStart = false;
         }
         LoadPlayer();
-
-        //start wind system
-        StartCoroutine(Wind());
 
         rigidBody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -245,17 +241,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    //wind on and off
-    IEnumerator Wind()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(3);
-            windZone.SetActive(false);
-            yield return new WaitForSeconds(timer);
-            windZone.SetActive(true);
-        }
-    }
 
     public void Reject(Vector2 position)
     {
