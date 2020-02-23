@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5766568914591069948}
   - component: {fileID: 7876575721271403800}
   - component: {fileID: 2235883371503322206}
+  - component: {fileID: 3885713738488871985}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: rocket
@@ -145,3 +146,22 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!95 &3885713738488871985
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733782389019050823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e8b0727d3d67294a94cbd50ce05f22b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
