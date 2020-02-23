@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -19,7 +20,7 @@ public class CameraControler : MonoBehaviour
     public static bool change = false;
     private bool changeSize=false;
     public static bool startSpawn=false;
-   
+    public PostProcessLayer fog;
 
     
     void Update()
@@ -104,13 +105,19 @@ public class CameraControler : MonoBehaviour
             changeSize = false;
         }
 
-        if (focusPosition.y >= 120 && focusPosition.y<192 && !PauseMenu.GameIsPaused)
+        if (InCity() && !PauseMenu.GameIsPaused)
         {
+            fog.enabled = true;
             Time.timeScale = 0.5f;
         }
         else if (!PauseMenu.GameIsPaused)
         {
+            fog.enabled = false;
             Time.timeScale = 1;
         }
+    }
+    bool InCity()
+    {
+        return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 193 && focusPosition.y > 117;
     }
 }
