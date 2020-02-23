@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8594655837422346693}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ground Detection (1)
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 8594655837718440033}
   - component: {fileID: 8594655837718440032}
   - component: {fileID: 8594655837718439966}
-  m_Layer: 8
+  - component: {fileID: 3190173402616286756}
+  m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +131,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 11ed859a78ec6564991654045f5d216a, type: 2}
+  m_Material: {fileID: 6200000, guid: b4c2a7c33a6ee0a42aec48fd4392ac3e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocket: {fileID: 4733782389019050823, guid: 77026022e00e5db43b991a11e3766cb5, type: 3}
+  animator: {fileID: 3190173402616286756}
   rayLength: 10
   speed: 5
   groundDetection: {fileID: 8594655837422346693}
@@ -183,3 +185,22 @@ MonoBehaviour:
   layerMaskTarget:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!95 &3190173402616286756
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8594655837718439965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fb4a1fa6fe29bd42b30756e9308d754, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -8,7 +8,8 @@ public class Robot : MonoBehaviour
 
     private PlayerController target;
     private BoxCollider2D boxCollider;
-    
+
+    public Animator animator;
     public float rayLength = 10f;
     public float speed;
     private bool movingRight = true;
@@ -25,6 +26,7 @@ public class Robot : MonoBehaviour
     }
     void Update()
     {
+        animator.SetBool("IsTriger", IsTarget());
         if (!stop && !IsTarget())
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
