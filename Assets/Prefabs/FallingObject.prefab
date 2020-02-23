@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7955646875641133609}
   - component: {fileID: 7955646875641133608}
   m_Layer: 0
-  m_Name: FaallingObject
+  m_Name: FallingObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a102d1e7d173e4147a5caea899412fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefabs: {fileID: 7955646875641133623}
   layerMask:
     serializedVersion: 2
     m_Bits: 256

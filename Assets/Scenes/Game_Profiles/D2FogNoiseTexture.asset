@@ -81,7 +81,7 @@ MonoBehaviour:
     defaultState: 1
   Size:
     overrideState: 1
-    value: 0.04
+    value: 0.02
   HorizontalSpeed:
     overrideState: 1
     value: 0.02
