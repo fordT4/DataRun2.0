@@ -26,8 +26,11 @@ public class HiddenPlatforms : MonoBehaviour
         {
             yield return new WaitForSeconds(timer);
             gameObject.SetActive(false);
-            yield return new WaitForSeconds(timer);
+            yield return new WaitForSeconds(timer - 1.5f);
+            //tutaj do animacji zmiany koloru - start animacji
+            yield return new WaitForSeconds(1.5f);
             gameObject.SetActive(true);
+            //tutaj koiec animacji - koniec animacji
         }
     }
 
