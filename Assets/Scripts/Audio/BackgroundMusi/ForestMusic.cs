@@ -16,13 +16,13 @@ public class ForestMusic : MonoBehaviour
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
         if (InForest() && !isPlaying)
         {
-            musicSource.Play();
+           Play();
             isPlaying = true;
-            musicSource.mute = false;
+            
         }
         else if(!InForest())
         {
-            musicSource.mute = true;
+            Stop();
             isPlaying = false;
         }
     }
@@ -30,5 +30,13 @@ public class ForestMusic : MonoBehaviour
     bool InForest()
     {
         return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 118 && focusPosition.y > 58;
+    }
+    void Play()
+    {
+        musicSource.Play();
+    }
+    void Stop()
+    {
+        musicSource.Stop();
     }
 }

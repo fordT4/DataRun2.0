@@ -16,13 +16,13 @@ public class RoofMusic : MonoBehaviour
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
         if (OnRoof() && !isPlaying)
         {
-            musicSource.Play();
+            Play();
             isPlaying = true;
-            musicSource.mute = false;
+           
         }
         else if(!OnRoof())
         {
-            musicSource.mute = true;
+            Stop();
             isPlaying = false;
         }
     }
@@ -30,5 +30,13 @@ public class RoofMusic : MonoBehaviour
     bool OnRoof()
     {
         return focusPosition.x < 19 && focusPosition.x > -164 && focusPosition.y < 95 && focusPosition.y > 72;
+    }
+    void Play()
+    {
+        musicSource.Play();
+    }
+    void Stop()
+    {
+        musicSource.Stop();
     }
 }

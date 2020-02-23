@@ -16,13 +16,13 @@ public class UniversityMusic : MonoBehaviour
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
         if (OnUniversity() && !isPlaying)
         {
-            musicSource.Play();
+           Play();
             isPlaying = true;
-            musicSource.mute = false;
+            
         }
         else if(!OnUniversity())
         {
-            musicSource.mute = true;
+           Stop();
             isPlaying = false;
         }
     }
@@ -30,5 +30,13 @@ public class UniversityMusic : MonoBehaviour
     bool OnUniversity()
     {
         return focusPosition.x < 19 && focusPosition.x > -8 && focusPosition.y < 72 && focusPosition.y > -2;
+    }
+    void Play()
+    {
+        musicSource.Play();
+    }
+    void Stop()
+    {
+        musicSource.Stop();
     }
 }

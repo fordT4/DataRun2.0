@@ -16,13 +16,13 @@ public class CityMusic : MonoBehaviour
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
         if (InCity() && !isPlaying)
         {
-            musicSource.Play();
+            Play();
             isPlaying = true;
-            musicSource.mute = false;
+            
         }
         else if(!InCity())
         {
-            musicSource.mute = true;
+            Stop();
             isPlaying = false;
         }
     }
@@ -30,5 +30,14 @@ public class CityMusic : MonoBehaviour
     bool InCity()
     {
         return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 193 && focusPosition.y > 118;
+    }
+
+    void Play()
+    {
+        musicSource.Play();
+    }
+    void Stop()
+    {
+        musicSource.Stop();
     }
 }

@@ -16,13 +16,13 @@ public class VillageMusic : MonoBehaviour
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
         if (OnDown() && !isPlaying)
         {
-            musicSource.Play();
+            Play();
             isPlaying = true;
-            musicSource.mute = false;
+           
         }
         else if(!OnDown())
         {
-            musicSource.mute = true;
+            Stop();
             isPlaying = false;
         }
     }
@@ -30,5 +30,13 @@ public class VillageMusic : MonoBehaviour
     bool OnDown()
     {
         return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 58 && focusPosition.y > -2;
+    }
+    void Play()
+    {
+        musicSource.Play();
+    }
+    void Stop()
+    {
+        musicSource.Stop();
     }
 }

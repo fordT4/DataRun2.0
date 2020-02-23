@@ -16,13 +16,13 @@ public class VillianBaseMusic : MonoBehaviour
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume");
         if (InBase() && !isPlaying)
         {
-            musicSource.Play();
+            Play();
             isPlaying = true;
-            musicSource.mute = false;
+            
         }
         else if(!InBase())
         {
-            musicSource.mute = true;
+           Stop();
             isPlaying = false;
         }
     }
@@ -30,5 +30,13 @@ public class VillianBaseMusic : MonoBehaviour
     bool InBase()
     {
         return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 268 && focusPosition.y > 193;
+    }
+    void Play()
+    {
+        musicSource.Play();
+    }
+    void Stop()
+    {
+        musicSource.Stop();
     }
 }
