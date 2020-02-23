@@ -10,6 +10,7 @@ public class Rocket : MonoBehaviour
     public LayerMask layerMask;
     private PlayerController target;
     private Vector2 moveDirection;
+    public Animator animator;
 
     void Start()
     {
@@ -30,13 +31,14 @@ public class Rocket : MonoBehaviour
     {
         if (coll.gameObject.name.Equals("Player"))
         {
-           
             target.Reject(transform.position);
-            Destroy(gameObject,0.1f);
+            Destroy(gameObject,0.2f);
+            animator.SetBool("Exist", false);
         }
         if (coll.gameObject.tag == "floor" || coll.gameObject.tag == "wall")
         {
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 0.2f);
+            animator.SetBool("Exist", false);
         }
     }
 
