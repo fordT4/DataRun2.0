@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MovingObject : MonoBehaviour
 {
-
+    public Animator animator;
     public float speed;
     private bool movingRight = true;
     private bool stop = false;
@@ -21,6 +21,7 @@ public class MovingObject : MonoBehaviour
             if (movingRight)
             {
                 stop = true;
+                animator.SetBool("StopPig", true);
                 StartCoroutine(Move());
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 movingRight = false;
@@ -28,6 +29,7 @@ public class MovingObject : MonoBehaviour
             else
             {
                 stop = true;
+                animator.SetBool("StopPig", true);
                 StartCoroutine(Move());
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 movingRight = true;
@@ -38,6 +40,7 @@ public class MovingObject : MonoBehaviour
     private IEnumerator Move()
     {
         yield return  new WaitForSeconds(2);
+        animator.SetBool("StopPig", false);
         stop = false;
      
     }
