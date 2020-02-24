@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         if (!VillanController.isAnimation || !canMove ||PauseMenu.GameIsPaused) return;
         if (Input.GetButton("Vertical"))
         {
-            transform.position=new Vector3(-212,126,0);
+            transform.position=new Vector3(-211,269,0);
         }
         
         // 3 level mechanics
@@ -253,7 +253,9 @@ public class PlayerController : MonoBehaviour
         magnitude = 700;
         GetComponent<Rigidbody2D>().AddForce(direction * magnitude);
         
-    }                                                                                                    
+    }
+
+ 
     private void OnTriggerEnter2D(Collider2D coll)  
     {
         if (coll.gameObject.tag == "windArea")
@@ -287,6 +289,12 @@ public class PlayerController : MonoBehaviour
         if (coll.gameObject.tag == "animal")
         {
             canMove = false;
+        }
+
+        if (coll.gameObject.tag == "villian")
+        {
+            CameraControler.end = true;
+            PlayerPrefs.SetInt("Start",0);
         }
     }
     private void OnCollisionExit2D(Collision2D coll)

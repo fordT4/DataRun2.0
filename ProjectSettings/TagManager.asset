@@ -12,6 +12,7 @@ TagManager:
   - animal
   - button
   - floor
+  - villian
   layers:
   - Default
   - TransparentFX

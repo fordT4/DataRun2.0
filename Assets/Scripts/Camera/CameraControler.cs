@@ -1,6 +1,8 @@
-﻿using System.Numerics;
+﻿using System.Collections;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -21,7 +23,7 @@ public class CameraControler : MonoBehaviour
     private bool changeSize=false;
     public static bool startSpawn=false;
     public PostProcessLayer fog;
-
+    public static bool end = false;
     
     void Update()
     {
@@ -115,9 +117,22 @@ public class CameraControler : MonoBehaviour
             fog.enabled = false;
             Time.timeScale = 1;
         }
+
+        if (end)
+        {
+            StartCoroutine(NewScene());
+        }
     }
     bool InCity()
     {
         return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 193 && focusPosition.y > 117;
+    }
+   
+
+    private IEnumerator NewScene()
+    {
+        float fadeTime = GameObject.Find("MainCamera").GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(6);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

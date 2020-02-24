@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
     public static bool isStart = false;
     public void PlayGame()
     {
+        PlayerPrefs.SetInt("Start",1);
         isStart = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

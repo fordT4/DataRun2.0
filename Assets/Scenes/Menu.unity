@@ -313,7 +313,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.20784314}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.27450982}
     m_SelectedColor: {r: 0.25490198, g: 0.8117647, b: 0.31764707, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1406145591}
+      - m_Target: {fileID: 1926449295}
         m_MethodName: LoadPlayer
         m_Mode: 1
         m_Arguments:
@@ -6285,7 +6285,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1406145591}
+      - m_Target: {fileID: 1926449295}
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -7464,9 +7464,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1406145589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9130edcae8a69eb478bcbe885c29580f, type: 3}
+  m_Script: {fileID: 11500000, guid: 635554c75f35a5a44b850af171fc76db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  load: {fileID: 44396498}
 --- !u!1 &1425178048
 GameObject:
   m_ObjectHideFlags: 0
