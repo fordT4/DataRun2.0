@@ -8,9 +8,7 @@ using Vector3 = UnityEngine.Vector3;
 
 public class CameraControler : MonoBehaviour
 {
-    
 
-  
     public GameObject focusObject;
     private Vector2 focusPosition;
     private float up=12;
@@ -118,6 +116,7 @@ public class CameraControler : MonoBehaviour
             Time.timeScale = 1;
         }
 
+      
         if (end)
         {
             StartCoroutine(NewScene());

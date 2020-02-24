@@ -304,6 +304,11 @@ public class PlayerController : MonoBehaviour
         {
             canMove = true;
         }
+        if (coll.gameObject.tag == "villian")
+        {
+            CameraControler.end = false;
+         
+        }
     }
   
     void OnApplicationQuit()

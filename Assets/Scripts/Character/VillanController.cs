@@ -27,13 +27,12 @@ public class VillanController : MonoBehaviour
 
     void Update()
     {
-        //music.volume = PlayerPrefs.GetFloat("FxMusic");
         if( PlayerController.isRestart)
         { startAnimation = true;}
     }
     public void Show_Me_Villain()
     {
-        transform.position = new Vector2(4.64f, -1.24f);
+        transform.position = new Vector2(-2.7f, -1.26f);
         gameObject.SetActive(true);
         isAnimation = false;
         StartCoroutine(MoveVillanTask());
@@ -41,8 +40,11 @@ public class VillanController : MonoBehaviour
 
     IEnumerator MoveVillanTask()
     {
-        //yield return new WaitForSeconds(5);//czas scenki to bedzie
-        yield return new WaitForSeconds(1);
+
+        rigidBody.gravityScale = 0;
+        rigidBody.velocity = new Vector2(6f, 0);
+        yield return new WaitForSeconds(1.3f);
+        rigidBody.gravityScale = 2;
         music.Jump();
         rigidBody.velocity = new Vector2(6f, 16f);
         yield return new WaitForSeconds(2);
