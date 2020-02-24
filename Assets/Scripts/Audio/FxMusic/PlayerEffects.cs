@@ -24,6 +24,7 @@ public class PlayerEffects : MonoBehaviour
     public void Reject()
     {
         musicSource.clip = explosion;
+        musicSource.volume /= 4;
         musicSource.Play();
     }
     public void WallHit()

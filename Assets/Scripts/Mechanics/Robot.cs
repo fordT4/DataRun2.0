@@ -10,7 +10,7 @@ public class Robot : MonoBehaviour
     private BoxCollider2D boxCollider;
 
     public Animator animator;
-    public float rayLength = 10f;
+    public float rayLength;
     public float speed;
     private bool movingRight = true;
     private bool stop = false;
@@ -72,6 +72,7 @@ public class Robot : MonoBehaviour
         Vector2 pos = transform.position + new Vector3(boxCollider.offset.x, boxCollider.offset.y);
         RaycastHit2D hitL = Physics2D.Raycast(pos, direction, rayLength, layerMaskTarget);
 
+        Debug.DrawRay(pos, direction, Color.green,rayLength);
         return (hitL.collider != null);
     }
     private IEnumerator Move()

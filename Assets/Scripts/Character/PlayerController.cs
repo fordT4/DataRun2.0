@@ -248,8 +248,9 @@ public class PlayerController : MonoBehaviour
         audio.Reject();
         float magnitude;
         Vector3 direction =  ( transform.position - (Vector3)position).normalized;
+        direction.y += 0.5f;
         Debug.Log(direction);
-        magnitude = IsGrounded() ? 2000 : 700;
+        magnitude = 700;
         GetComponent<Rigidbody2D>().AddForce(direction * magnitude);
         
     }                                                                                                    

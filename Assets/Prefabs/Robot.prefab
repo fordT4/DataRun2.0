@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocket: {fileID: 4733782389019050823, guid: 77026022e00e5db43b991a11e3766cb5, type: 3}
   animator: {fileID: 3190173402616286756}
-  rayLength: 10
+  rayLength: 100
   speed: 5
   groundDetection: {fileID: 8594655837422346693}
   layerMaskMove:
