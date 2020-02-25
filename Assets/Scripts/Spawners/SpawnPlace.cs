@@ -5,6 +5,7 @@ public class SpawnPlace : MonoBehaviour
 {
     
     [SerializeField] public GameObject myPrefabs;
+
     private float dropRate;
     private float nextDrop;
     void Start()
@@ -17,11 +18,11 @@ public class SpawnPlace : MonoBehaviour
     {
         if (CameraControler.startSpawn)
         {
-            CheckToDrop();
+            Drop();
         }
     }
 
-    void CheckToDrop()
+    void Drop()
     {
         if(Time.time>nextDrop)
         {
