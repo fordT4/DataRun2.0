@@ -8,6 +8,8 @@ public class PlayerEffects : MonoBehaviour
     public AudioClip explosion;
     public AudioClip wallHit;
     public AudioClip fall;
+    public AudioClip oinking;
+    public AudioClip nut;
     public AudioSource musicSource;
     
 
@@ -30,6 +32,16 @@ public class PlayerEffects : MonoBehaviour
     public void WallHit()
     {
         musicSource.clip = wallHit;
+        musicSource.Play();
+    }
+    public void NutHit()
+    {
+        musicSource.clip = nut;
+        musicSource.Play();
+    }
+    public void Oinking()
+    {
+        musicSource.clip = oinking;
         musicSource.Play();
     }
     public void Fall()

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7955646875641133608}
   m_Layer: 0
   m_Name: FallingObject
-  m_TagString: Untagged
+  m_TagString: nut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

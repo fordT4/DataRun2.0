@@ -287,8 +287,13 @@ public class PlayerController : MonoBehaviour
         {
             audio.WallHit();
         }
+        if (coll.gameObject.tag == "nut")
+        {
+            audio.NutHit();
+        }
         if (coll.gameObject.tag == "animal")
         {
+            audio.Oinking();
             canMove = false;
         }
 

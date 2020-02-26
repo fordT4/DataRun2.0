@@ -13,6 +13,7 @@ TagManager:
   - button
   - floor
   - villian
+  - nut
   layers:
   - Default
   - TransparentFX
