@@ -11,7 +11,8 @@ public class PlatformWithLaser : MonoBehaviour
     private BoxCollider2D boxCollider;
     public LayerMask layerMaskTarget;
     private bool isActive;
-    public GameObject gameObject;
+    public GameObject closePlatform;
+    public GameObject openPlatform;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,14 +23,16 @@ public class PlatformWithLaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("aktyw"+ isActive);
-        Debug.Log(IsTarget());
+        Debug.Log("Laser jest aktywny"+ isActive);
+        Debug.Log("Widze postać" +IsTarget());
         if (IsTarget() && isActive)
         {
-            gameObject.SetActive(false);
+            Debug.Log("Wylaczam");
+            closePlatform.SetActive(false);
+            openPlatform.SetActive(true);
         }
 
-        if (!gameObject.activeSelf)
+        if (!closePlatform.activeSelf)
         {
             StartCoroutine(Active());
         }
@@ -50,15 +53,17 @@ public class PlatformWithLaser : MonoBehaviour
     private IEnumerator Active()
     {
         yield return new WaitForSeconds(3);
-        gameObject.SetActive(true);
+        openPlatform.SetActive(false);
+        closePlatform.SetActive(true);
     }
     private bool IsTarget()
     {
-        Vector2 pos = transform.position + new Vector3(boxCollider.offset.x-boxCollider.size.x/1.33f, boxCollider.offset.y+boxCollider.size.y/2+0.3f,0);
+        Vector2 pos = transform.position + new Vector3(boxCollider.offset.x-boxCollider.size.x/2, boxCollider.offset.y+boxCollider.size.y/2+0.3f,0);
       
         RaycastHit2D hitL = Physics2D.Raycast(pos, Vector2.right, 3f, layerMaskTarget);
 
         Debug.DrawRay(pos, Vector2.right, Color.green);
+        
         return (hitL.collider != null);
     }
 }
