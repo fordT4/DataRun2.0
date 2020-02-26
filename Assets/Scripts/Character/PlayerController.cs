@@ -215,7 +215,8 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", 0);
         animator.SetBool("Falling", false);
         animator.SetBool("SpacePressed", false);
-       
+
+        CameraControler.startSpawn = false;
         transform.position = new Vector2(-4f, -1.14f);
         isRestart = true;
         SaveSystem.SavePlayer(this);

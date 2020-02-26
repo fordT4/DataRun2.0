@@ -9,10 +9,11 @@ public class WindController : MonoBehaviour
     public GameObject focusObject;
     public AudioSource musicSource;
     private Vector2 focusPosition;
-    //private bool isPlaying = false;
+    private bool isPlaying = false;
+    private int i = 0;
     void Start()
     {
-        StartCoroutine(Wind());
+     
     }
 
     void Update()
@@ -27,6 +28,15 @@ public class WindController : MonoBehaviour
         {
             musicSource.UnPause();
         }
+
+        if (OnRoof() && !isPlaying)
+        {
+            Debug.Log(i);
+            isPlaying = true;
+            StartCoroutine(Wind());
+            
+        }
+   
     }
 
     bool OnRoof()
@@ -36,18 +46,16 @@ public class WindController : MonoBehaviour
 
     IEnumerator Wind()
     {
-        while (true)
-        {
-          
+        /*while (true)
+        {*/
+        i++;
             yield return new WaitForSeconds(5);
             windZone.SetActive(true);
-            if (OnRoof())
-            {
-                musicSource.Play();
-            }
+            musicSource.Play();
             yield return new WaitForSeconds(3);
             windZone.SetActive(false);
-            
-        }
+            isPlaying = false;
+
+            //}
     }
 }

@@ -17,9 +17,9 @@ public class SpawnPlaceNutDropAnimation : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("IsDroping", CameraControler.startSpawn);
         if (CameraControler.startSpawn)
         {
-            animator.SetBool("IsDroping", CameraControler.startSpawn);
             Drop();
         }
     }
@@ -28,7 +28,7 @@ public class SpawnPlaceNutDropAnimation : MonoBehaviour
     {
         if(Time.time>nextDrop)
         {
-            Instantiate(myPrefabs, transform.position, Quaternion.identity);
+            Instantiate(myPrefabs, new Vector3(transform.position.x,transform.position.y,transform.position.z-1), Quaternion.identity);
             nextDrop = Time.time + dropRate;
         }
     }
