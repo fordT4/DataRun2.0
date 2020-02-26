@@ -29,7 +29,7 @@ public class VillianBaseMusic : MonoBehaviour
 
     bool InBase()
     {
-        return focusPosition.x < -171 && focusPosition.x > -224.5f && focusPosition.y < 268 && focusPosition.y > 193;
+        return focusPosition.x < -171 && focusPosition.x > -224.5f  && focusPosition.y > 193;
     }
     void Play()
     {
