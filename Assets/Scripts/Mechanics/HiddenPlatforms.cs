@@ -12,24 +12,33 @@ public class HiddenPlatforms : MonoBehaviour
     private BoxCollider2D boxCollider;
     public float timer;
     public GameObject gameObject;
-    
+    public float startTime;
+    private bool isStart = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        StartCoroutine(IsAvaible());
     }
 
+    void Update()
+    {
+        if (Time.time > startTime && !isStart)
+        {
+            StartCoroutine(IsAvaible());
+            isStart = true;
+        }
+    }
     private IEnumerator IsAvaible()
     {
         while (true)
         {
-            yield return new WaitForSeconds(timer);
+            gameObject.SetActive(true);
+            yield return new WaitForSeconds(3);//czas wlaczenia
             gameObject.SetActive(false);
-            yield return new WaitForSeconds(timer - 1.5f);
+            yield return new WaitForSeconds(21f - 1.5f);//ile czasu nie dziala
             //tutaj do animacji zmiany koloru - start animacji
             yield return new WaitForSeconds(1.5f);
-            gameObject.SetActive(true);
+            
             //tutaj koiec animacji - koniec animacji
         }
     }

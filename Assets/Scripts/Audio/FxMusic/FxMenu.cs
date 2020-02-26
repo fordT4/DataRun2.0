@@ -7,9 +7,9 @@ public class FxMenu : MonoBehaviour
 {
     public AudioSource musicSource;
     void Update()
+
     {
         musicSource.volume = PlayerPrefs.GetFloat("FxVolume");
-
     }
 
 

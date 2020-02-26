@@ -11,7 +11,7 @@ public class Rocket : MonoBehaviour
     private PlayerController target;
     private Vector2 moveDirection;
     public Animator animator;
-   
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
