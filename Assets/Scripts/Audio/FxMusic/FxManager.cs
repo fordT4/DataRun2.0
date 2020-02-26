@@ -8,7 +8,7 @@ public class FxManager: MonoBehaviour
     public AudioSource musicSource;
     void Update()
     {
-        musicSource.volume = PlayerPrefs.GetFloat("FxVolume")/6;
+        musicSource.volume = PlayerPrefs.GetFloat("FxVolume");
     }
 
 
