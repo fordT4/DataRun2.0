@@ -47,12 +47,12 @@ public class PlatformWithLaser : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
             isActive = false;
-            On.SetActive(false);
-            Off.SetActive(true);
+            On.SetActive(true);
+            Off.SetActive(false);
             yield return new WaitForSeconds(7);
             isActive = true;
-            Off.SetActive(false);
-            On.SetActive(true);
+            Off.SetActive(true);
+            On.SetActive(false);
         }
     }
 
