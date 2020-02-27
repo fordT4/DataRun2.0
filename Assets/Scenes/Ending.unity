@@ -176,13 +176,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "GAME DIRECTOR\nBorys Duchewicz\n \n\nPROGRAMMING\nBorys Duchewicz\n\n\nART
+  m_text: "GAME ADMINISTRATOR\nBorys Duchewicz\n \n\nPROGRAMMING\nBorys Duchewicz\n\n\nART
     DIRECTOR\nS\u0142awomir Tokarski\n\n\nCHARACTER DESIGN\nS\u0142awomir Tokarski\n\n\nANIMATION\nS\u0142awomir
     Tokarski\n\n\nLEVEL DESIGN\nBorys Duchewicz\n\n\nBACKGROUND DESIGN\nS\u0142awomir
     Tokarski\n\n\nMUSIC\nMateusz Sosnowski\n\n\nSOUNDS EFFECTS\nMateusz Sosnowski"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 529dc98483b31ef45844f4fcece0d4da, type: 2}
+  m_sharedMaterial: {fileID: 795769826545208596, guid: 529dc98483b31ef45844f4fcece0d4da,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -248,7 +249,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -106.802505, w: -588.0128}
   m_textInfo:
     textComponent: {fileID: 172523237}
-    characterCount: 290
+    characterCount: 295
     spriteCount: 0
     spaceCount: 49
     wordCount: 33
@@ -664,7 +665,7 @@ GameObject:
   - component: {fileID: 1364653472}
   - component: {fileID: 1364653471}
   m_Layer: 5
-  m_Name: TMP SubMeshUI [LiberationSans SDF Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [ThaleahFat_TTF SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
