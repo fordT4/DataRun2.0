@@ -4,6 +4,8 @@ using Vector2 = UnityEngine.Vector2;
 
 public class VillanController : MonoBehaviour
 {
+    public Animator animator;
+
     public PlayerEffects music;
     private Rigidbody2D rigidBody;
     public static bool isAnimation=false;
@@ -40,12 +42,16 @@ public class VillanController : MonoBehaviour
 
     IEnumerator MoveVillanTask()
     {
+        transform.eulerAngles = new Vector3(0, -180, 0);
 
         rigidBody.gravityScale = 0;
         rigidBody.velocity = new Vector2(6f, 0);
+        animator.SetBool("ToWalk", true);
         yield return new WaitForSeconds(1.3f);
         rigidBody.gravityScale = 2;
+        animator.SetBool("ToWalk", false);
         music.Jump();
+        animator.SetBool("ToJump", true);
         rigidBody.velocity = new Vector2(6f, 16f);
         yield return new WaitForSeconds(2);
         music.Jump();
@@ -57,6 +63,7 @@ public class VillanController : MonoBehaviour
         music.Jump();
         rigidBody.velocity = new Vector2(0, 16f);
         yield return new WaitForSeconds(1);
+        animator.SetBool("ToJump", false);
         isAnimation = true;
         transform.position=new Vector3(-221,268.5f,0);
     }
