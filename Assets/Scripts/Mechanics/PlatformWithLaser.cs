@@ -7,6 +7,8 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlatformWithLaser : MonoBehaviour
 {
+    public GameObject On;
+    public GameObject Off;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     public LayerMask layerMaskTarget;
@@ -45,8 +47,12 @@ public class PlatformWithLaser : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
             isActive = false;
-            yield return new WaitForSeconds(3);
+            On.SetActive(false);
+            Off.SetActive(true);
+            yield return new WaitForSeconds(7);
             isActive = true;
+            Off.SetActive(false);
+            On.SetActive(true);
         }
     }
 
