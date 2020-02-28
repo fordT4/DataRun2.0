@@ -7,8 +7,8 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlatformWithLaser : MonoBehaviour
 {
-    public GameObject On;
-    public GameObject Off;
+    /*public GameObject On;
+    public GameObject Off;*/
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     public LayerMask layerMaskTarget;
@@ -47,12 +47,9 @@ public class PlatformWithLaser : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
             isActive = false;
-            On.SetActive(true);
-            Off.SetActive(false);
-            yield return new WaitForSeconds(7);
+            yield return new WaitForSeconds(15);
             isActive = true;
-            Off.SetActive(true);
-            On.SetActive(false);
+  
         }
     }
 
@@ -64,9 +61,9 @@ public class PlatformWithLaser : MonoBehaviour
     }
     private bool IsTarget()
     {
-        Vector2 pos = transform.position + new Vector3(boxCollider.offset.x-boxCollider.size.x/2, boxCollider.offset.y+boxCollider.size.y/2+0.3f,0);
+        Vector2 pos = transform.position + new Vector3(boxCollider.offset.x-boxCollider.size.x/3.5f, boxCollider.offset.y+boxCollider.size.y/2+0.3f,0);
       
-        RaycastHit2D hitL = Physics2D.Raycast(pos, Vector2.right, 3f, layerMaskTarget);
+        RaycastHit2D hitL = Physics2D.Raycast(pos, Vector2.right, 0.5f, layerMaskTarget);
 
         Debug.DrawRay(pos, Vector2.right, Color.green);
         

@@ -24,6 +24,7 @@ public class VillanController : MonoBehaviour
         {
             isAnimation = true;
             transform.position = new Vector3(-221, 268.5f, 0);
+            transform.localScale = new Vector3(0.8f, 0.8f, 1);
         }
     }
 
