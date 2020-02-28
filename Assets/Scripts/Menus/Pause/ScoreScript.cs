@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 using TMPro;
+using Debug = System.Diagnostics.Debug;
 
 public class ScoreScript : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class ScoreScript : MonoBehaviour
     public static float tmpT;
 
     public static float corrector;
-    // Start is called before the first frame update
+   
     void Start()
     {
         LoadScore();
@@ -23,9 +25,15 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tmpT = Time.time + startTime-corrector;
-       
-       
+        if (Time.timeScale ==0.5f)
+        {
+            tmpT = Time.time*2 + startTime - corrector;
+        }
+        else
+        {
+            tmpT = Time.time + startTime - corrector;
+        }
+
         string hours = (((int)tmpT / 3600)%3600).ToString("f0");
         string minutes = (((int)tmpT / 60)%60).ToString("f0");
         string seconds = (tmpT % 60).ToString("f0");
