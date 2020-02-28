@@ -22,7 +22,12 @@ public class CameraControler : MonoBehaviour
     public static bool startSpawn=false;
     public PostProcessLayer fog;
     public static bool end = false;
-    
+    public GameObject policeman;
+
+    void Start()
+    {
+        policeman.SetActive(false);
+    }
     void Update()
     {
         
@@ -131,6 +136,9 @@ public class CameraControler : MonoBehaviour
     private IEnumerator NewScene()
     {
         end = false;
+        yield return new WaitForSeconds(0.5f);
+        policeman.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
         float fadeTime = GameObject.Find("MainCamera").GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -23,7 +23,7 @@ public class VillanController : MonoBehaviour
         else
         {
             isAnimation = true;
-            transform.position = new Vector3(-221, 268.5f, 0);
+            transform.position = new Vector3(-218, 268.5f, 0);
             transform.localScale = new Vector3(0.8f, 0.8f, 1);
         }
     }
@@ -35,6 +35,7 @@ public class VillanController : MonoBehaviour
     }
     public void Show_Me_Villain()
     {
+        transform.localScale = new Vector3(1, 1, 1);
         transform.position = new Vector2(-2.7f, -1.26f);
         gameObject.SetActive(true);
         isAnimation = false;
@@ -66,8 +67,8 @@ public class VillanController : MonoBehaviour
         yield return new WaitForSeconds(1);
         animator.SetBool("ToJump", false);
         isAnimation = true;
-        transform.position=new Vector3(-221,268.5f,0);
+        transform.position=new Vector3(-218,268.5f,0);
         transform.localScale=new Vector3(0.8f,0.8f,1);
     }
-
+ 
 }

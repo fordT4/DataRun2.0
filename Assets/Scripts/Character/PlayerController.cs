@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         if (!VillanController.isAnimation || !canMove ||PauseMenu.GameIsPaused) return;
         if (Input.GetButton("Vertical"))
         {
-            transform.position=new Vector3(-214.2f,225.6f,0);
+            transform.position=new Vector3(-214.2f,279.6f,0);
         }
         
         // 3 level mechanics
