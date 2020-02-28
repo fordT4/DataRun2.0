@@ -130,6 +130,7 @@ public class CameraControler : MonoBehaviour
 
     private IEnumerator NewScene()
     {
+        end = false;
         float fadeTime = GameObject.Find("MainCamera").GetComponent<Fading>().BeginFade(1);
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
