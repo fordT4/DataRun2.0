@@ -39,7 +39,7 @@ public class HiddenPlatforms : MonoBehaviour
             gameObject.SetActive(true);
             yield return new WaitForSeconds(3);//czas wlaczenia
             gameObject.SetActive(false);
-            yield return new WaitForSeconds(21f - 2.5f);//ile czasu nie dziala
+            yield return new WaitForSeconds(22f - 2.5f);//ile czasu nie dziala
            
             //tutaj koiec animacji - koniec animacji
         }

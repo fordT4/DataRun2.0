@@ -57,11 +57,50 @@ public class PlayerController : MonoBehaviour
     {
 
         if (!VillanController.isAnimation || !canMove ||PauseMenu.GameIsPaused) return;
-        /*if (Input.GetButton("Vertical"))
+        /*if (Input.GetKeyDown(KeyCode.F1))
         {
-            transform.position=new Vector3(-214.2f,279.6f,0);
+            transform.position=new Vector3(0,74,0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F2))
+        {
+            transform.position = new Vector3(-148, 75, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F3))
+        {
+            transform.position = new Vector3(-207, 10.6f, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F4))
+        {
+            transform.position = new Vector3(-216, 59, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F5))
+        {
+            transform.position = new Vector3(-212, 121, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F6))
+        {
+            transform.position = new Vector3(-209, 171, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F7))
+        {
+            transform.position = new Vector3(-218, 201, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F8))
+        {
+            transform.position = new Vector3(-214, 226, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F9))
+        {
+            transform.position = new Vector3(-207, 242.5f, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F10))
+        {
+            transform.position = new Vector3(-218, 254, 0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F11))
+        {
+            transform.position = new Vector3(-214, 269, 0);
         }*/
-        
         // 3 level mechanics
         if (inDownScene)
         {
@@ -121,6 +160,7 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
     // Update is called once per frame
     void Update()
     {
