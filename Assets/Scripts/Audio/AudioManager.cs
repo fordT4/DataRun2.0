@@ -8,12 +8,36 @@ public class AudioManager : MonoBehaviour
 
     public Slider volume;
     public Slider fxVolume;
+    public Dropdown resolutionDropdown;
+    Resolution[] resolutions;
 
     // Start is called before the first frame update
     void Start()
     {
         volume.value = PlayerPrefs.GetFloat("MusicVolume");
         fxVolume.value = PlayerPrefs.GetFloat("FxVolume");
+
+        // Dodawanie możliwych opcji rozdzielczości
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+        List<string> options = new List<string>();
+
+        int currentResolutionIndex = 0;
+
+        for (int i = 0; i < resolutions.Length; ++i)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
     }
 
     public void Volume()
@@ -25,5 +49,14 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat("FxVolume", fxVolume.value);
     }
 
+    public void SetFullscreen (bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+    }
 
+    public void SetResolution (int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
 }
