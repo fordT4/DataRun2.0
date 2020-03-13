@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
 
         if (!VillanController.isAnimation || !canMove ||PauseMenu.GameIsPaused) return;
-        /*if (Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             transform.position=new Vector3(0,74,0);
         }
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.F11))
         {
             transform.position = new Vector3(-214, 269, 0);
-        }*/
+        }
         // 3 level mechanics
         if (inDownScene)
         {
