@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
         rigidBody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-
+        Cursor.visible = false;
     }
     private void FixedUpdate()
     {
